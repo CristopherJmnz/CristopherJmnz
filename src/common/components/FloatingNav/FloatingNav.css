@@ -22,6 +22,7 @@
   padding: clamp(6px, 1.5vw, 12px) clamp(12px, 3vw, 20px);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(4px, 1vw, 12px);
   box-shadow: 
     0 10px 40px rgba(0, 0, 0, 0.4),
@@ -30,7 +31,7 @@
   /* Completamente responsive automático */
   width: fit-content;
   max-width: 95vw;
-  min-height: clamp(48px, 8vh, 64px);
+  min-height: var(--floating-nav-height);
   /* Sin transiciones que causen saltos */
   transition: none;
   /* Optimización de rendimiento */
@@ -40,100 +41,7 @@
   margin: 0 auto;
 }
 
-.floating-nav__logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.floating-nav__home {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Tamaño completamente responsive */
-  width: clamp(36px, 6vw, 48px);
-  height: clamp(36px, 6vw, 48px);
-  flex-shrink: 0;
-}
-
-.floating-nav__home:hover {
-  transform: scale(1.1);
-}
-
-.floating-nav__home img {
-  width: clamp(28px, 5vw, 40px);
-  height: clamp(28px, 5vw, 40px);
-  border-radius: 50%;
-  border: 2px solid rgba(217, 194, 72, 0.3);
-  transition: all 0.2s ease;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.floating-nav__home:hover img {
-  border-color: rgba(217, 194, 72, 0.8);
-  box-shadow: 0 0 20px rgba(217, 194, 72, 0.3);
-}
-
-.floating-nav__items {
-  display: flex;
-  align-items: center;
-  gap: clamp(2px, 1vw, 8px);
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.floating-nav__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background: transparent;
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: visible;
-  /* Tamaño completamente responsive */
-  width: clamp(32px, 5vw, 48px);
-  height: clamp(32px, 5vw, 48px);
-  flex-shrink: 0;
-}
-
-.floating-nav__item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1); /* antes: translateY(-2px) */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.floating-nav__item.active {
-  background: linear-gradient(135deg, #89650b8f, #d9c248);
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(217, 194, 72, 0.4);
-  transform: none; /* sin desplazamiento */
-}
-
-.floating-nav__item.active:hover {
-  transform: scale(1.1); /* igual que Inicio */
-  box-shadow: 0 10px 30px rgba(217, 194, 72, 0.5);
-}
-
-.floating-nav__item i {
-  font-size: clamp(12px, 2.5vw, 18px);
-  min-width: clamp(12px, 2.5vw, 18px);
-}
-
-/* Tooltips */
+/* Tooltips comunes */
 .floating-nav__item[data-tooltip],
 .floating-nav__social[data-tooltip],
 .floating-nav__cv[data-tooltip],
@@ -200,167 +108,10 @@
   }
 }
 
-.floating-nav__actions {
-  display: flex;
-  align-items: center;
-  gap: clamp(4px, 1vw, 8px);
-  padding-left: clamp(6px, 1.5vw, 12px);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
-}
-
-.floating-nav__social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  font-size: clamp(14px, 2.5vw, 18px);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: visible;
-  /* Tamaño completamente responsive */
-  width: clamp(32px, 5vw, 48px);
-  height: clamp(32px, 5vw, 48px);
-  flex-shrink: 0;
-}
-
-.floating-nav__social:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1); /* antes: translateY(-3px) */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.floating-nav__cv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #89650b8f, #d9c248);
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  font-size: clamp(13px, 2.2vw, 16px);
-  font-weight: 700;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(217, 194, 72, 0.4);
-  position: relative;
-  overflow: visible;
-  /* Tamaño completamente responsive */
-  width: clamp(32px, 5vw, 48px);
-  height: clamp(32px, 5vw, 48px);
-  flex-shrink: 0;
-}
-
-.floating-nav__cv:hover {
-  transform: scale(1.1); /* antes: translateY(-3px) */
-  box-shadow: 0 12px 35px rgba(217, 194, 72, 0.6);
-  color: #fff;
-  background: linear-gradient(135deg, #a0750d, #f0d654);
-}
-
-/* --- Responsive actions submenu (RRSS + CV) --- */
-/* Botón “más” oculto por defecto (solo móvil lo muestra) */
-.floating-nav__more {
-  position: relative;
-  display: none;
-  margin-left: clamp(6px, 1.5vw, 12px);
-}
-
-.floating-nav__more-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  color: #fff;
-  width: clamp(32px, 5vw, 48px);
-  height: clamp(32px, 5vw, 48px);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.floating-nav__more-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.floating-nav__more-btn i {
-  font-size: clamp(14px, 2.5vw, 18px);
-}
-
-/* Menú desplegable (glassmorphism) */
-.floating-nav__menu {
-  position: absolute;
-  bottom: calc(100% + 12px);
-  right: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  min-width: 180px;
-  padding: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.05) inset;
-  transform-origin: bottom right;
-  transform: scale(0.95);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .15s ease, transform .15s ease;
-  z-index: 1001;
-}
-
-.floating-nav__menu.open {
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: all;
-}
-
-.floating-nav__menu::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  right: 14px;
-  border: 6px solid transparent;
-  border-top-color: rgba(0,0,0,0.85);
-}
-
-.floating-nav__menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  transition: background .2s ease, transform .2s ease;
-  font-size: 14px;
-}
-
-.floating-nav__menu-item:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-1px);
-}
-
-.floating-nav__menu-item i {
-  width: 18px;
-  text-align: center;
-}
-
-/* Asegurar que NUNCA se oculten las secciones */
-.floating-nav__item { display: flex; }
-
-/* En móvil: ocultar acciones inline y mostrar botón “más” */
+/* Responsive base */
 @media (max-width: 768px) {
   .floating-nav__actions { display: none; }
   .floating-nav__more { display: flex; }
-  .floating-nav__item { display: flex !important; }
 }
 
 @media (max-width: 480px) {
@@ -372,55 +123,8 @@
     padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
     max-width: calc(100vw - 20px);
   }
-  
-  /* Ocultar algunos elementos en pantallas muy pequeñas si es necesario */
-  .floating-nav__item:nth-last-child(n+6) {
-    display: none;
-  }
 }
 
-@media (max-width: 360px) {
-  .floating-nav__container {
-    gap: clamp(2px, 0.5vw, 4px);
-  }
-  
-  /* En pantallas muy pequeñas mostrar solo los elementos esenciales */
-  .floating-nav__item:nth-last-child(n+4) {
-    display: none;
-  }
-}
-
-/* Animation enhancements */
-.floating-nav__item,
-.floating-nav__social,
-.floating-nav__cv,
-.floating-nav__home {
-  position: relative;
-}
-
-/* Limitar el pseudo-elemento decorativo para no afectar a los elementos con tooltip */
-.floating-nav__item:not([data-tooltip])::before,
-.floating-nav__social:not([data-tooltip])::before,
-.floating-nav__cv:not([data-tooltip])::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.floating-nav__item:not([data-tooltip]):hover::before,
-.floating-nav__social:not([data-tooltip]):hover::before,
-.floating-nav__cv:not([data-tooltip]):hover::before {
-  opacity: 1;
-}
-
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }

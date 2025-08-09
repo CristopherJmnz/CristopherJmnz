@@ -1,6 +1,11 @@
 * { margin: 0; padding: 0; }
 *, *::before, *::after { box-sizing: border-box; }
 
+:root {
+  --floating-nav-height: clamp(48px, 8vh, 64px);
+  --floating-nav-gap: 12px;
+}
+
 body { min-height: 100dvh; }
 input, button, textarea, select { font: inherit; }
 

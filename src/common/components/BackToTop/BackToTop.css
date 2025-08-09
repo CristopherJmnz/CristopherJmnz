@@ -1,22 +1,22 @@
 .back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: calc(20px + clamp(6px, 1.5vw, 12px));
   right: 20px;
   color: #fff;
   border: none;
   border-radius: 50%;
-  padding: 10px 15px;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1100;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   /* Estado inicial: oculto */
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
+  width: clamp(32px, 5vw, 48px);
+  height: clamp(32px, 5vw, 48px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Estado visible */
@@ -37,7 +37,8 @@
 }
 
 .back-to-top i {
-  font-size: 18px;
+  font-size: clamp(12px, 2.5vw, 18px);
+  min-width: clamp(12px, 2.5vw, 18px);
   background: linear-gradient(to right, #89650b8f, #d9c248);
   -webkit-background-clip: text;
   background-clip: text;
@@ -56,4 +57,12 @@
 
 .gold-button:hover {
   background: linear-gradient(to right, #89650b8f, #d9c248);
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    right: 12px;
+    /* Sit above the bottom navbar: bottom spacing (10px) + navbar height (item + vertical paddings) + extra gap */
+    bottom: 70px;
+  }
 }

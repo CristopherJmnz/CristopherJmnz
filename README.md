@@ -1,12 +1,28 @@
-# React + Vite
+# Portfolio de Cristopher Jiménez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![JmnzLogoNoBackground](https://github.com/CristopherJmnz/CristopherJmnz-Portfolio/assets/107364276/9a1048a5-3b7c-44e3-b780-28c95fadfe65)
 
-Currently, two official plugins are available:
+¡Bienvenido a mi portfolio! Aquí comparto quién soy, mis habilidades, proyectos y experiencia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Acerca de mí
+Soy Cristopher Jiménez, desarrollador web apasionado por la tecnología y la creación de soluciones útiles e intuitivas. Me gusta trabajar en equipo y colaborar con diseño, desarrollo y negocio para convertir ideas en productos reales. Cuido el detalle, las buenas prácticas y estoy en aprendizaje constante.
 
-## Expanding the ESLint configuration
+## Contenido
+- Sobre mí: una breve presentación y objetivos.
+- Habilidades: tecnologías y áreas en las que destaco.
+- Proyectos: trabajos destacados y aprendizajes clave.
+- Certificaciones: formación y logros relevantes.
+- Experiencia: recorrido profesional.
+- Contacto: email y descarga de CV.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologías utilizadas
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React
+
+## Contacto
+- Correo electrónico: crisjimenez19@gmail.com
+- LinkedIn: https://www.linkedin.com/in/cristopher-jimenez-jimenez
+
+¡Gracias por visitar mi portfolio! Si tienes preguntas o propuestas, estaré encantado de leerte.
