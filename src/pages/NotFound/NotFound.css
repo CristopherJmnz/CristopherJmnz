@@ -1,0 +1,59 @@
+/* error.css */
+.not-found {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #333;
+}
+
+.error-container {
+  max-width: 600px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.error-container h1 {
+  font-size: 10em;
+  margin: 0;
+  color: transparent;
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.error-container h2 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.error-container p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.error-container .back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.error-container .back-home:hover {
+  background: #0056b3;
+}

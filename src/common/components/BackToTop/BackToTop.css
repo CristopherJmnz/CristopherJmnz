@@ -1,0 +1,59 @@
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* Estado inicial: oculto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+/* Estado visible */
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Cuando está visible Y en hover */
+.back-to-top.visible:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.back-to-top i {
+  font-size: 18px;
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover i {
+  color: #fff;
+}
+
+.gold-button {
+  text-decoration: none;
+  border: 2px solid #d9c248;
+}
+
+.gold-button:hover {
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+}

@@ -1,0 +1,75 @@
+.banner {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(@images/banner.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 250px;
+}
+
+.banner h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+}
+
+/* Estilos iniciales para el logo */
+.banner-logo {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: fadeInScale 1s ease-out forwards;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+}
+
+/* Estilos iniciales para el título */
+.banner-title {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInFromTop 1s ease-out forwards;
+  animation-delay: 0.5s;
+  -webkit-animation: slideInFromTop 1s ease-out forwards;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+}
+
+.banner-subtitle {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInFromBottom 1s ease-out forwards;
+  -webkit-animation: slideInFromBottom 1s ease-out forwards;
+  animation-delay: 0.5s;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+}
+
+@media (max-width: 768px) {
+    .banner h1 {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,72 @@
+.certifications-list {
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.certification-card {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  transition: transform 0.2s;
+  max-width: 250px;
+  flex: 1;
+
+  img {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.certification-card:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+
+.certification-badge {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.certification-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.certification-button:hover {
+  background: linear-gradient(to right, #d9c248, #89650b8f);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+  .certifications-list {
+    flex-direction: column;
+  }
+}

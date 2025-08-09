@@ -1,0 +1,154 @@
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-list {
+  opacity: 0;
+  /*Inicialmenteocultalalistadehabilidades*/
+  max-height: 0;
+  /*Ocultaelcontenido*/
+  overflow: hidden;
+  /*Ocultacualquiercontenidoquesobresalga*/
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos para las listas de habilidades que están visibles */
+.skills-list.active {
+  opacity: 1;
+  /* Hace visible la lista de habilidades */
+  max-height: 2000px;
+  /* Muestra todo el contenido */
+}
+
+/* Estilos para los checkboxes personalizados */
+.custom-checkbox {
+  display: none;
+  /* Oculta el checkbox estándar */
+}
+
+/* Estilos para el contenedor del checkbox personalizado */
+.custom-checkbox-container {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin: 10px;
+}
+
+/* Estilos para el botón que simula el checkbox */
+.custom-checkbox-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #d9c248;
+  border-radius: 30px;
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
+  background: linear-gradient(to right, #89650b8f, #e6c932);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin: 0 8px;
+}
+
+/* Estilos para el botón cuando el checkbox está marcado */
+.custom-checkbox:checked+.custom-checkbox-button {
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  color: #fff;
+}
+
+/* Estilos para el botón al hacer hover */
+.custom-checkbox-button:hover,
+.custom-checkbox:checked+.custom-checkbox-button {
+  background: linear-gradient(to right, #89650b8f, #d9c248);
+  color: #fff;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+
+.skills li {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px);
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.skills li {
+  max-width: 140px;
+}
+
+.skills li:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.skills li i,
+.skills li svg {
+  width: 70px;
+  height: 70px;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .skills li {
+        width: calc(100% - 20px);
+    }
+      .skills li i,
+  .skills li svg {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .skills li i,
+  .skills li svg {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+} */
