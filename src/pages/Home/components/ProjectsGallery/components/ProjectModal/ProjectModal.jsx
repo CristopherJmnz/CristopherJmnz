@@ -26,7 +26,6 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
     alignmentContainerRef.current = element;
   };
 
-  // Resetear slide al cambiar de proyecto (antes de que se vea)
   useEffect(() => {
     if (!isOpen) {
       cleanupCarousel();

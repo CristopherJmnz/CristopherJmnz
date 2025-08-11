@@ -42,7 +42,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: clamp(28px, 4.5vw, 44px);
-  background: rgba(0,0,0,0.65);
+  background: #333;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 20px;
   backdrop-filter: blur(12px);

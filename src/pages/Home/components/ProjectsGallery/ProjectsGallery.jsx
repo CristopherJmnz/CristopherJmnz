@@ -40,7 +40,7 @@ export const ProjectsGallery = () => {
                   alt={project.id}
                   className="gallery-image"
                 />
-                <div className="gallery-title">{project.id}</div>
+                <div className="gallery-title">{project.name}</div>
               </div>
             );
           })}
