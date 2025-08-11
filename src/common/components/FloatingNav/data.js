@@ -4,8 +4,8 @@ export const NAV_ITEMS = [
   { id: "about", label: "Sobre mí", icon: "fa-user" },
   { id: "skills", label: "Skills", icon: "fa-code" },
   { id: "projects", label: "Proyectos", icon: "fa-folder-open" },
-  { id: "certifications", label: "Certificaciones", icon: "fa-medal" },
   { id: "experience", label: "Experiencia", icon: "fa-briefcase" },
+  { id: "certifications", label: "Certificaciones", icon: "fa-medal" },
   { id: "contact", label: "Contacto", icon: "fa-envelope" }
 ];
 

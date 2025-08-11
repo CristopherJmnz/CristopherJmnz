@@ -21,26 +21,21 @@
   color: #fff;
   transition: all 0.3s ease;
 }
-.floating-nav__social {
+.floating-nav__social,
+.floating-nav__cv {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: clamp(14px, 2.5vw, 18px);
 }
-.floating-nav__social:hover {
+.floating-nav__social:hover,
+.floating-nav__cv:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: scale(1.1);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   border-color: rgba(255, 255, 255, 0.3);
 }
-.floating-nav__cv {
-  background: linear-gradient(135deg, #89650b8f, #d9c248);
-  border: none;
-  font-size: clamp(13px, 2.2vw, 16px);
-  font-weight: 700;
-  box-shadow: 0 6px 20px rgba(217, 194, 72, 0.4);
-}
-.floating-nav__cv:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(217, 194, 72, 0.6);
-  background: linear-gradient(135deg, #a0750d, #f0d654);
+.floating-nav__cv i {
+  color: transparent;
+  background: linear-gradient(135deg, #89650b, #d9c248);
+  -webkit-background-clip: text;
+  background-clip: text;
 }

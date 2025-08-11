@@ -44,15 +44,19 @@ export const SKILLS = {
       iconColor: "#f7df1e",
     },
     {
-      name: "JQuery",
-      icon: (
-        <JQueryIcon/>
-      ),
-    },
-    {
       name: "React",
       icon: <ReactIcon/>,
       iconColor: "#61dafb",
+    },
+    {
+      name: "Next.js",
+      icon: (
+        <NextJsIcon/>
+      ), 
+    },
+    {
+      name: "Angular",
+      icon: <AngularIcon />, 
     },
     {
       name: "Vue",
@@ -61,14 +65,10 @@ export const SKILLS = {
       ),
     },
     {
-      name: "Angular",
-      icon: <AngularIcon />, 
-    },
-    {
-      name: "Next.js",
+      name: "JQuery",
       icon: (
-        <NextJsIcon/>
-      ), 
+        <JQueryIcon/>
+      ),
     },
     {
       name: "Git",

@@ -1,6 +1,6 @@
 import Section from "@commonComponents/Section/Section";
 import { useState } from "react";
-import { SKILLS } from "../../../../common/constants/skills";
+import { SKILLS } from "@common/constants/skills";
 import "./Skills.css";
 
 export const Skills = () => {
@@ -26,7 +26,7 @@ export const Skills = () => {
   };
   return (
     <Section id="skills" className="skills">
-      <h2>Habilidades</h2>
+      <h2>Skills</h2>
       <div className="skills-checkboxes">
         <label className="custom-checkbox-container">
           <input
@@ -37,7 +37,7 @@ export const Skills = () => {
             checked={activeSkill === "frontend"}
             onChange={() => toggleSkills("frontend")}
           />
-          <span className="custom-checkbox-button"> Front-End </span>
+          <span className="custom-checkbox-button"> Frontend </span>
         </label>
 
         <label className="custom-checkbox-container">
@@ -49,10 +49,10 @@ export const Skills = () => {
             checked={activeSkill === "backend"}
             onChange={() => toggleSkills("backend")}
           />
-          <span className="custom-checkbox-button"> Back-End </span>
+          <span className="custom-checkbox-button"> Backend </span>
         </label>
 
-        <label className="custom-checkbox-container">
+        {/* <label className="custom-checkbox-container">
           <input
             type="radio"
             className="custom-checkbox skill-checkbox"
@@ -62,11 +62,10 @@ export const Skills = () => {
             onChange={() => toggleSkills("powerplatform")}
           />
           <span className="custom-checkbox-button"> Power Platform </span>
-        </label>
+        </label> */}
       </div>
       {renderSkillsList(SKILLS.frontend, "frontend")}
       {renderSkillsList(SKILLS.backend, "backend")}
-      {renderSkillsList(SKILLS.powerplatform, "powerplatform")}
     </Section>
   );
 };

@@ -62,7 +62,6 @@
 @media (max-width: 480px) {
   .back-to-top {
     right: 12px;
-    /* Sit above the bottom navbar: bottom spacing (10px) + navbar height (item + vertical paddings) + extra gap */
     bottom: 70px;
   }
 }

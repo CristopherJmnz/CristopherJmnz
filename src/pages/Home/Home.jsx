@@ -18,9 +18,9 @@ export const Home = () => {
 
         <ProjectsGallery />
 
-        <Certifications />
-
         <WorkExperience />
+
+        <Certifications />
 
         <ContactMe />
       </main>

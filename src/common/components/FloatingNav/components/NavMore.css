@@ -74,6 +74,13 @@
   width: 18px;
   text-align: center;
 }
+/* Icono dorado solo para la opción de descargar CV */
+.floating-nav__menu-item .fa-download {
+  color: transparent;
+  background: linear-gradient(135deg, #89650b, #d9c248);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 @media (max-width: 768px) {
   .floating-nav__more {
     display: flex;
