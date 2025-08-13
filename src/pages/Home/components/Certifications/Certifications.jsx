@@ -1,8 +1,7 @@
-import Section from "@commonComponents/Section/Section";
-import "./Certifications.css";
-import { CERTIFICATIONS } from "@common/constants/certifications";
+import Section from '@commonComponents/Section/Section';
+import './Certifications.css';
+import { CERTIFICATIONS } from '@common/constants/certifications';
 export const Certifications = () => {
-  
   return (
     <Section className="certifications" id="certifications">
       <h2>Certificaciones</h2>

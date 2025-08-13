@@ -1,12 +1,11 @@
-const BASE_IMAGE_PATH = "/src/assets/img/";
+const BASE_IMAGE_PATH = '/src/assets/img/';
 
-export const ProjectCarousel = ({ 
-  images, 
-  isOpen, 
-  carouselId = "carouselProjects",
+export const ProjectCarousel = ({
+  images,
+  carouselId = 'carouselProjects',
   activeSlide,
   onNext,
-  onPrev
+  onPrev,
 }) => {
   const handleNext = () => {
     const carouselElement = document.getElementById(carouselId);
@@ -41,16 +40,11 @@ export const ProjectCarousel = ({
     >
       <div className="carousel-inner">
         {images.map((imgSrc, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${
-              index === activeSlide ? "active" : ""
-            }`}
-          >
+          <div key={index} className={`carousel-item ${index === activeSlide ? 'active' : ''}`}>
             <img
               src={`${BASE_IMAGE_PATH}${imgSrc}`}
               className="d-block w-100"
-              style={{ aspectRatio: "16/8" }}
+              style={{ aspectRatio: '16/8' }}
               alt={`Slide ${index + 1}`}
             />
           </div>
@@ -64,10 +58,7 @@ export const ProjectCarousel = ({
         data-bs-target={`#${carouselId}`}
         data-bs-slide="prev"
       >
-        <span
-          className="carousel-control-prev-icon"
-          aria-hidden="true"
-        ></span>
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button
@@ -77,10 +68,7 @@ export const ProjectCarousel = ({
         data-bs-target={`#${carouselId}`}
         data-bs-slide="next"
       >
-        <span
-          className="carousel-control-next-icon"
-          aria-hidden="true"
-        ></span>
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>

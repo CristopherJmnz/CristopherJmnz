@@ -136,7 +136,8 @@
   flex-direction: column;
   overflow: hidden;
   min-height: 500px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
@@ -279,26 +280,36 @@
   color: rgba(245, 245, 247, 0.95);
   background: rgba(22, 22, 24, 0.66);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 6px 18px rgba(0, 0, 0, 0.28);
-  transition: transform 0.2s ease, border-color 0.2s ease,
-    background-color 0.2s ease, box-shadow 0.2s ease;
-  -webkit-transition: transform 0.2s ease, border-color 0.2s ease,
-    background-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  -webkit-transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tag:hover {
   transform: translateY(-1px) scale(1.02);
   background: rgba(28, 28, 31, 0.72);
   border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 10px 24px rgba(0, 0, 0, 0.34);
 }
 
 .tag:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18),
-    0 0 0 4px rgba(0, 122, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 0 4px rgba(0, 122, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .project-links {
@@ -322,10 +333,14 @@
   border-radius: 12px;
   background: rgba(22, 22, 24, 0.66);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 8px 24px rgba(0, 0, 0, 0.32);
-  transition: transform 0.18s ease, background-color 0.18s ease,
-    border-color 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 /* Keep icons golden; prevent icon-only hover scaling */
@@ -339,7 +354,8 @@
   transform: translateY(-2px) scale(1.06);
   background: rgba(28, 28, 31, 0.72);
   border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 12px 28px rgba(0, 0, 0, 0.38);
 }
 
@@ -353,8 +369,10 @@
 
 .project-links a:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18),
-    0 0 0 4px rgba(0, 122, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 0 4px rgba(0, 122, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .icons {
@@ -473,35 +491,25 @@
   }
   35% {
     /* Estira hacia el destino: más ancho, menos alto; sin rotación */
-    transform: translate(
-        calc(var(--close-dx) * 0.18),
-        calc(var(--close-dy) * 0.18)
-      )
-      scaleX(1.05) scaleY(0.9) skewX(1deg) skewY(0deg);
+    transform: translate(calc(var(--close-dx) * 0.18), calc(var(--close-dy) * 0.18)) scaleX(1.05)
+      scaleY(0.9) skewX(1deg) skewY(0deg);
     clip-path: inset(0% 12% 0% 12% round 14px);
   }
   65% {
     /* Banda estrecha tipo "genie" sin rotación */
-    transform: translate(
-        calc(var(--close-dx) * 0.6),
-        calc(var(--close-dy) * 0.6)
-      )
-      scaleX(0.9) scaleY(0.5) skewX(2deg) skewY(0deg);
+    transform: translate(calc(var(--close-dx) * 0.6), calc(var(--close-dy) * 0.6)) scaleX(0.9)
+      scaleY(0.5) skewX(2deg) skewY(0deg);
     clip-path: inset(35% 34% 35% 34% round 12px);
   }
   82% {
     /* Casi en destino, muy comprimido, aún sin rotar */
-    transform: translate(
-        calc(var(--close-dx) * 0.88),
-        calc(var(--close-dy) * 0.88)
-      )
-      scaleX(0.7) scaleY(0.3) skewX(2deg) skewY(0deg);
+    transform: translate(calc(var(--close-dx) * 0.88), calc(var(--close-dy) * 0.88)) scaleX(0.7)
+      scaleY(0.3) skewX(2deg) skewY(0deg);
     clip-path: inset(45% 45% 45% 45% round 10px);
   }
   100% {
     opacity: 0;
-    transform: translate(var(--close-dx), var(--close-dy))
-      scale(var(--close-scale));
+    transform: translate(var(--close-dx), var(--close-dy)) scale(var(--close-scale));
     clip-path: inset(49% 49% 49% 49% round 8px);
   }
 }

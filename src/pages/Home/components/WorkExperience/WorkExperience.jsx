@@ -1,6 +1,6 @@
-import Section from "@commonComponents/Section/Section";
-import "./WorkExperience.css";
-import { WORK_EXPERIENCE } from "../../../../common/constants/workExperience";
+import Section from '@commonComponents/Section/Section';
+import './WorkExperience.css';
+import { WORK_EXPERIENCE } from '../../../../common/constants/workExperience';
 export const WorkExperience = () => {
   return (
     <Section className="experience" id="experience">

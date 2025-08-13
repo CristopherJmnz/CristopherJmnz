@@ -1,16 +1,17 @@
-import Section from "@commonComponents/Section/Section";
-import CvLink from "@documents/CV CRISTOPHER.pdf";
-import "./ContactMe.css";
+import Section from '@commonComponents/Section/Section';
+import CvLink from '@documents/CV CRISTOPHER.pdf';
+import './ContactMe.css';
 
 export const ContactMe = () => {
   return (
     <Section id="contact" className="contact">
       <div className="contact__shell" aria-labelledby="contact-title">
-
-        <h2 id="contact-title" className="contact__title">Hablemos</h2>
+        <h2 id="contact-title" className="contact__title">
+          Hablemos
+        </h2>
         <p className="contact__lead">
-          ¿Tienes una idea o un reto técnico? Me apasiona construir experiencias
-          de alto rendimiento y calidad.
+          ¿Tienes una idea o un reto técnico? Me apasiona construir experiencias de alto rendimiento
+          y calidad.
         </p>
 
         <div className="contact__grid">

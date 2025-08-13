@@ -1,4 +1,4 @@
-import "./NavItems.css";
+import './NavItems.css';
 
 export function NavItems({ items, activeId, onSelect }) {
   return (
@@ -6,7 +6,7 @@ export function NavItems({ items, activeId, onSelect }) {
       {items.map((it) => (
         <button
           key={it.id}
-          className={`floating-nav__item ${activeId === it.id ? "active" : ""}`}
+          className={`floating-nav__item ${activeId === it.id ? 'active' : ''}`}
           onClick={() => onSelect(it.id)}
           title={it.label}
           data-tooltip={it.label}

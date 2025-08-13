@@ -22,25 +22,28 @@ export const useBootstrapCarousel = (isOpen, carouselId) => {
     };
 
     // Escuchar cuando Bootstrap cambie de slide
-    carouselElement.addEventListener("slide.bs.carousel", handleSlideEvent);
+    carouselElement.addEventListener('slide.bs.carousel', handleSlideEvent);
 
     return () => {
-      carouselElement.removeEventListener("slide.bs.carousel", handleSlideEvent);
+      carouselElement.removeEventListener('slide.bs.carousel', handleSlideEvent);
     };
   }, [isOpen, carouselId]);
 
   // Función para ir a un slide específico (para thumbnails)
-  const goToSlide = useCallback((index) => {
-    setActiveSlide(index);
-    
-    const carouselElement = document.getElementById(carouselId);
-    if (carouselElement && window.bootstrap) {
-      const carousel = window.bootstrap.Carousel.getOrCreateInstance(carouselElement);
-      if (carousel) {
-        carousel.to(index);
+  const goToSlide = useCallback(
+    (index) => {
+      setActiveSlide(index);
+
+      const carouselElement = document.getElementById(carouselId);
+      if (carouselElement && window.bootstrap) {
+        const carousel = window.bootstrap.Carousel.getOrCreateInstance(carouselElement);
+        if (carousel) {
+          carousel.to(index);
+        }
       }
-    }
-  }, [carouselId]);
+    },
+    [carouselId]
+  );
 
   // Cleanup al cerrar
   const cleanupCarousel = useCallback(() => {
@@ -57,6 +60,6 @@ export const useBootstrapCarousel = (isOpen, carouselId) => {
   return {
     activeSlide,
     goToSlide,
-    cleanupCarousel
+    cleanupCarousel,
   };
 };

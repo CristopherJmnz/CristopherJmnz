@@ -1,4 +1,4 @@
-import "./NavMore.css";
+import './NavMore.css';
 
 export function NavMore({ isOpen, setOpen, actions, moreRef }) {
   return (
@@ -17,18 +17,12 @@ export function NavMore({ isOpen, setOpen, actions, moreRef }) {
 
       <div
         id="floating-actions-menu"
-        className={`floating-nav__menu ${isOpen ? "open" : ""}`}
+        className={`floating-nav__menu ${isOpen ? 'open' : ''}`}
         role="menu"
       >
         {actions.map((a, idx) =>
-          a.kind === "download" ? (
-            <a
-              key={idx}
-              role="menuitem"
-              href={a.href}
-              download
-              className="floating-nav__menu-item"
-            >
+          a.kind === 'download' ? (
+            <a key={idx} role="menuitem" href={a.href} download className="floating-nav__menu-item">
               <i className={a.icon}></i>
               <span>{a.label}</span>
             </a>

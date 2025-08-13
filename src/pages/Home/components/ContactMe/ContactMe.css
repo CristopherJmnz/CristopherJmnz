@@ -7,13 +7,13 @@
 /* Auras animadas de fondo */
 .contact::before,
 .contact::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: auto 10% -80px 10%;
   height: 180px;
   filter: blur(60px);
   z-index: -1;
-  opacity: .35;
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -28,13 +28,21 @@
 }
 
 @keyframes floatAura1 {
-  from { transform: translateY(0) translateX(0); }
-  to { transform: translateY(-16px) translateX(-10px); }
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-16px) translateX(-10px);
+  }
 }
 
 @keyframes floatAura2 {
-  from { transform: translateY(0) translateX(0); }
-  to { transform: translateY(-12px) translateX(8px); }
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-12px) translateX(8px);
+  }
 }
 
 /* Shell glass */
@@ -43,13 +51,14 @@
   margin: 0 auto;
   padding: clamp(28px, 4.5vw, 44px);
   background: #333;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.05) inset;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
   text-align: center;
 }
-
 
 /* Headings */
 .contact__title {
@@ -57,7 +66,9 @@
   font-size: clamp(26px, 4.5vw, 38px);
   line-height: 1.15;
   background: linear-gradient(135deg, #a37a14, #f0d654);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .contact__lead {
@@ -75,7 +86,9 @@
 }
 
 @media (max-width: 640px) {
-  .contact__grid { grid-template-columns: 1fr; }
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta {
@@ -88,18 +101,29 @@
   border-radius: 16px;
   text-decoration: none;
   color: #fff;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  transition: transform .18s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  transition:
+    transform 0.18s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.cta i { font-size: 18px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; }
+.cta i {
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
 
 /* Auroras internas al hover */
 .cta::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: -40% -10% auto -10%;
   height: 200%;
@@ -107,17 +131,38 @@
   transform: translateY(40%) rotate(-8deg);
   filter: blur(40px);
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
   pointer-events: none;
 }
 
-.cta:hover { transform: translateY(-3px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); }
-.cta:hover::after { opacity: 1; }
+.cta:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.cta:hover::after {
+  opacity: 1;
+}
 
 /* Variantes */
-.cta--email i { background: linear-gradient(135deg, #89650b, #d9c248); box-shadow: 0 10px 30px rgba(217, 194, 72, 0.35); }
-.cta--cv i { background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.1); }
+.cta--email i {
+  background: linear-gradient(135deg, #89650b, #d9c248);
+  box-shadow: 0 10px 30px rgba(217, 194, 72, 0.35);
+}
+.cta--cv i {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-.cta__content { text-align: left; }
-.cta__title { display: block; font-weight: 800; }
-.cta__desc { display: block; color: #cfcfcf; font-size: 13px; }
+.cta__content {
+  text-align: left;
+}
+.cta__title {
+  display: block;
+  font-weight: 800;
+}
+.cta__desc {
+  display: block;
+  color: #cfcfcf;
+  font-size: 13px;
+}

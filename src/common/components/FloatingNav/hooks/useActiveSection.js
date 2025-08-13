@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useActiveSection(sectionIds, offset = 200) {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState('');
 
   useEffect(() => {
     const onScroll = () => {
@@ -14,9 +14,9 @@ export function useActiveSection(sectionIds, offset = 200) {
       if (current) setActive(current);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, [sectionIds, offset]);
 
   return active;

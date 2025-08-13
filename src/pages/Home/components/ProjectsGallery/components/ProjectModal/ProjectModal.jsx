@@ -1,11 +1,11 @@
-import { useEffect, useState, useCallback } from "react";
-import GlassLiquid from "@common/components/Visuals/GlassLiquid/GlassLiquid";
-import { useBootstrapCarousel } from "@hooks/useBootstrapCarousel";
-import { useModal } from "@hooks/useModal";
-import { useScrollSupport } from "@hooks/useScrollSupport";
-import { useThumbnailAlignment } from "@hooks/useThumbnailAlignment";
-import { ProjectCarousel } from "../ProjectCarousel/ProjectCarousel";
-import { ProjectThumbnails } from "../ProjectThumbnails/ProjectThumbnails";
+import { useEffect, useState, useCallback } from 'react';
+import GlassLiquid from '@common/components/Visuals/GlassLiquid/GlassLiquid';
+import { useBootstrapCarousel } from '@hooks/useBootstrapCarousel';
+import { useModal } from '@hooks/useModal';
+import { useScrollSupport } from '@hooks/useScrollSupport';
+import { useThumbnailAlignment } from '@hooks/useThumbnailAlignment';
+import { ProjectCarousel } from '../ProjectCarousel/ProjectCarousel';
+import { ProjectThumbnails } from '../ProjectThumbnails/ProjectThumbnails';
 
 export const ProjectModal = ({ project, isOpen, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
@@ -13,22 +13,17 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
   const scrollContainerRef = useScrollSupport(isOpen);
   const { activeSlide, goToSlide, cleanupCarousel } = useBootstrapCarousel(
     isOpen,
-    "carouselProjects"
+    'carouselProjects'
   );
-  const alignmentContainerRef = useThumbnailAlignment(
-    project?.images?.length || 0,
-    isOpen
-  );
+  const alignmentContainerRef = useThumbnailAlignment(project?.images?.length || 0, isOpen);
 
   const requestClose = useCallback(() => {
     if (isClosing) return;
     setIsClosing(true);
     // Calcular vector hacia la tarjeta de origen (gallery-item del proyecto)
     try {
-      const origin = document.querySelector(
-        `.gallery-item[data-project-id="${project?.id}"]`
-      );
-      const modalEl = document.getElementById("modal-content");
+      const origin = document.querySelector(`.gallery-item[data-project-id="${project?.id}"]`);
+      const modalEl = document.getElementById('modal-content');
       if (origin && modalEl) {
         const o = origin.getBoundingClientRect();
         const m = modalEl.getBoundingClientRect();
@@ -78,22 +73,18 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!isOpen || !project) return null;
 
   return (
-    <div
-      className={`modal ${isClosing ? "closing" : ""}`}
-      id="modal"
-      onClick={handleModalClick}
-    >
+    <div className={`modal ${isClosing ? 'closing' : ''}`} id="modal" onClick={handleModalClick}>
       <div
         id="modal-content"
-        className={`modal-content ${isClosing ? "closing" : ""}`}
+        className={`modal-content ${isClosing ? 'closing' : ''}`}
         style={
           isClosing
             ? {
-                "--close-dx": `${closeVars.dx}px`,
-                "--close-dy": `${closeVars.dy}px`,
-                "--close-dist": `${closeVars.dist || 0}px`,
-                "--close-rot": `${closeVars.rot || 0}rad`,
-                "--close-scale": closeVars.scale,
+                '--close-dx': `${closeVars.dx}px`,
+                '--close-dy': `${closeVars.dy}px`,
+                '--close-dist': `${closeVars.dist || 0}px`,
+                '--close-rot': `${closeVars.rot || 0}rad`,
+                '--close-scale': closeVars.scale,
               }
             : undefined
         }

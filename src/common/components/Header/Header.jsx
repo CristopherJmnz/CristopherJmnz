@@ -1,14 +1,10 @@
-import "./Header.css";
-import Logo from "@images/JmnzLogoNoBackgroundSquare.webp";
-import CvLink from "@documents/CV CRISTOPHER.pdf";
+import './Header.css';
+import Logo from '@images/JmnzLogoNoBackgroundSquare.webp';
+import CvLink from '@documents/CV CRISTOPHER.pdf';
 export const Header = () => {
   return (
     <>
-      <nav
-        id="mainNavbar"
-        className="navbar navbar-expand-lg sticky-top"
-        data-bs-theme="dark"
-      >
+      <nav id="mainNavbar" className="navbar navbar-expand-lg sticky-top" data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img
@@ -80,11 +76,7 @@ export const Header = () => {
               >
                 <i className="fa-brands fa-github"></i>
               </a>
-              <a
-                className="cv"
-                href={CvLink}
-                download
-              >
+              <a className="cv" href={CvLink} download>
                 Descargar CV
               </a>
             </div>

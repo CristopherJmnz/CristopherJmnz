@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   gap: clamp(4px, 1vw, 12px);
-  box-shadow: 
+  box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.05) inset,
     0 -1px 0 rgba(0, 0, 0, 0.1) inset;
@@ -110,15 +110,19 @@
 
 /* Responsive base */
 @media (max-width: 768px) {
-  .floating-nav__actions { display: none; }
-  .floating-nav__more { display: flex; }
+  .floating-nav__actions {
+    display: none;
+  }
+  .floating-nav__more {
+    display: flex;
+  }
 }
 
 @media (max-width: 480px) {
   .floating-nav-bottom {
     bottom: 10px;
   }
-  
+
   .floating-nav__container {
     padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
     max-width: calc(100vw - 20px);

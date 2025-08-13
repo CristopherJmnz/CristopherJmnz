@@ -1,14 +1,8 @@
-import { useIntersectionObserver } from '@hooks/useIntersectionObserver'
-import "./Section.css"
+import { useIntersectionObserver } from '@hooks/useIntersectionObserver';
+import './Section.css';
 
-const Section = ({ 
-  children, 
-  className = '', 
-  animationType = 'fadeIn',
-  delay = 0,
-  ...props 
-}) => {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 })
+const Section = ({ children, className = '', animationType = 'fadeIn', delay = 0, ...props }) => {
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <section
@@ -19,7 +13,7 @@ const Section = ({
     >
       {children}
     </section>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

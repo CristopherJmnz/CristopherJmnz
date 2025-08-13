@@ -1,10 +1,10 @@
-import "./NavActions.css";
+import './NavActions.css';
 
 export function NavActions({ actions }) {
   return (
     <div className="floating-nav__actions" aria-hidden={false}>
       {actions.map((a, idx) =>
-        a.kind === "download" ? (
+        a.kind === 'download' ? (
           <a
             key={idx}
             href={a.href}

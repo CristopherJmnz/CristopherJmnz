@@ -8,8 +8,7 @@ export const useThumbnailAlignment = (thumbnailsCount, isActive) => {
     if (!container) return;
 
     const isDesktop = window.innerWidth >= 1024;
-    container.style.justifyContent = 
-      isDesktop || thumbnailsCount <= 2 ? "center" : "flex-start";
+    container.style.justifyContent = isDesktop || thumbnailsCount <= 2 ? 'center' : 'flex-start';
   };
 
   useEffect(() => {
@@ -18,10 +17,10 @@ export const useThumbnailAlignment = (thumbnailsCount, isActive) => {
     adjustAlignment();
 
     const handleResize = () => adjustAlignment();
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [thumbnailsCount, isActive]);
 

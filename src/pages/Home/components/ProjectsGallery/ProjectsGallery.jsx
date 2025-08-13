@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Section from "@commonComponents/Section/Section";
-import "./ProjectsGallery.css";
-import { PROJECT_DATA } from "@common/constants/projectsData";
-import "./ProjectsGallery.css";
-import { ProjectModal } from "./components/ProjectModal/ProjectModal";
+import { useState } from 'react';
+import Section from '@commonComponents/Section/Section';
+import './ProjectsGallery.css';
+import { PROJECT_DATA } from '@common/constants/projectsData';
+import './ProjectsGallery.css';
+import { ProjectModal } from './components/ProjectModal/ProjectModal';
 
 export const ProjectsGallery = () => {
   const [selectedProject, setSelectedProject] = useState(null);

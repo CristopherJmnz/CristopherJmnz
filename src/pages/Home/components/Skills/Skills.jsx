@@ -1,20 +1,17 @@
-import Section from "@commonComponents/Section/Section";
-import { useState } from "react";
-import { SKILLS } from "@common/constants/skills";
-import "./Skills.css";
+import Section from '@commonComponents/Section/Section';
+import { useState } from 'react';
+import { SKILLS } from '@common/constants/skills';
+import './Skills.css';
 
 export const Skills = () => {
-  const [activeSkill, setActiveSkill] = useState("frontend");
+  const [activeSkill, setActiveSkill] = useState('frontend');
 
   const toggleSkills = (section) => {
     setActiveSkill(section);
   };
   const renderSkillsList = (skills, categoryId) => {
     return (
-      <ul
-        id={categoryId}
-        className={`skills-list ${activeSkill === categoryId ? "active" : ""}`}
-      >
+      <ul id={categoryId} className={`skills-list ${activeSkill === categoryId ? 'active' : ''}`}>
         {skills.map((skill, index) => (
           <li key={index} className="animate">
             {skill.icon}
@@ -34,8 +31,8 @@ export const Skills = () => {
             className="custom-checkbox skill-checkbox"
             id="frontendCheckbox"
             name="skills"
-            checked={activeSkill === "frontend"}
-            onChange={() => toggleSkills("frontend")}
+            checked={activeSkill === 'frontend'}
+            onChange={() => toggleSkills('frontend')}
           />
           <span className="custom-checkbox-button"> Frontend </span>
         </label>
@@ -46,8 +43,8 @@ export const Skills = () => {
             className="custom-checkbox skill-checkbox"
             id="backendCheckbox"
             name="skills"
-            checked={activeSkill === "backend"}
-            onChange={() => toggleSkills("backend")}
+            checked={activeSkill === 'backend'}
+            onChange={() => toggleSkills('backend')}
           />
           <span className="custom-checkbox-button"> Backend </span>
         </label>
@@ -64,8 +61,8 @@ export const Skills = () => {
           <span className="custom-checkbox-button"> Power Platform </span>
         </label> */}
       </div>
-      {renderSkillsList(SKILLS.frontend, "frontend")}
-      {renderSkillsList(SKILLS.backend, "backend")}
+      {renderSkillsList(SKILLS.frontend, 'frontend')}
+      {renderSkillsList(SKILLS.backend, 'backend')}
     </Section>
   );
 };

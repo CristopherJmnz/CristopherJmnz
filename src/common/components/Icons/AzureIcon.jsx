@@ -1,11 +1,6 @@
 export const AzureIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="33.86"
-      height="32"
-      viewBox="0 0 256 242"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="33.86" height="32" viewBox="0 0 256 242">
       <defs>
         <linearGradient
           id="logosMicrosoftAzure0"
@@ -30,13 +25,7 @@ export const AzureIcon = () => {
           <stop offset="62.3%" stopOpacity=".05" />
           <stop offset="100%" stopOpacity="0" />
         </linearGradient>
-        <linearGradient
-          id="logosMicrosoftAzure2"
-          x1="37.279%"
-          x2="62.473%"
-          y1="4.6%"
-          y2="99.979%"
-        >
+        <linearGradient id="logosMicrosoftAzure2" x1="37.279%" x2="62.473%" y1="4.6%" y2="99.979%">
           <stop offset="0%" stopColor="#3CCBF4" />
           <stop offset="100%" stopColor="#2892DF" />
         </linearGradient>

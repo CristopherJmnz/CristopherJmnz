@@ -1,4 +1,4 @@
-.skills{
+.skills {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,11 +38,21 @@
   padding: 10px 20px;
   border: 2px solid #d9c248;
   border-radius: 30px;
-  transition: background-color 0.2s, color 0.2s;
-  -webkit-transition: background-color 0.2s, color 0.2s;
-  -moz-transition: background-color 0.2s, color 0.2s;
-  -ms-transition: background-color 0.2s, color 0.2s;
-  -o-transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  -webkit-transition:
+    background-color 0.2s,
+    color 0.2s;
+  -moz-transition:
+    background-color 0.2s,
+    color 0.2s;
+  -ms-transition:
+    background-color 0.2s,
+    color 0.2s;
+  -o-transition:
+    background-color 0.2s,
+    color 0.2s;
   background: linear-gradient(to right, #89650b8f, #e6c932);
   background-clip: text;
   -webkit-background-clip: text;
@@ -55,14 +65,14 @@
 }
 
 /* Estilos para el botón cuando el checkbox está marcado */
-.custom-checkbox:checked+.custom-checkbox-button {
+.custom-checkbox:checked + .custom-checkbox-button {
   background: linear-gradient(to right, #89650b8f, #d9c248);
   color: #fff;
 }
 
 /* Estilos para el botón al hacer hover */
 .custom-checkbox-button:hover,
-.custom-checkbox:checked+.custom-checkbox-button {
+.custom-checkbox:checked + .custom-checkbox-button {
   background: linear-gradient(to right, #89650b8f, #d9c248);
   color: #fff;
 }
@@ -76,7 +86,6 @@
   max-width: 1100px;
   width: 100%;
 }
-
 
 .skills li {
   background-color: #fff;
@@ -120,12 +129,11 @@
   margin-bottom: 10px;
 }
 
-
 @media (max-width: 768px) {
-    .skills li {
-        width: calc(100% - 20px);
-    }
-      .skills li i,
+  .skills li {
+    width: calc(100% - 20px);
+  }
+  .skills li i,
   .skills li svg {
     width: 50px;
     height: 50px;

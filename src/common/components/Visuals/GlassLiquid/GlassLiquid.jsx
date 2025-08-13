@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
-import "./GlassLiquid.css";
+import { useEffect, useRef } from 'react';
+import './GlassLiquid.css';
 
 export default function GlassLiquid({
-  opacity = 0.32, 
+  opacity = 0.32,
   speed = 0.12,
-  colorA = [0.10, 0.10, 0.11], // gris muy oscuro
+  colorA = [0.1, 0.1, 0.11], // gris muy oscuro
   colorB = [0.26, 0.26, 0.29], // gris oscuro
   grain = 0.7,
   dprMax = 1.5, // limitar resolución para estabilidad de FPS
@@ -30,8 +30,8 @@ export default function GlassLiquid({
       const h = parent.clientHeight;
       canvas.width = Math.max(1, Math.floor(w * dpr));
       canvas.height = Math.max(1, Math.floor(h * dpr));
-      canvas.style.width = w + "px";
-      canvas.style.height = h + "px";
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
       const gl = glRef.current;
       if (gl) {
         gl.viewport(0, 0, canvas.width, canvas.height);
@@ -40,11 +40,11 @@ export default function GlassLiquid({
 
     const ro = new ResizeObserver(resize);
     ro.observe(canvas.parentElement);
-    window.addEventListener("resize", resize);
+    window.addEventListener('resize', resize);
     resize();
     return () => {
       ro.disconnect();
-      window.removeEventListener("resize", resize);
+      window.removeEventListener('resize', resize);
     };
   }, [dprMax]);
 
@@ -53,15 +53,19 @@ export default function GlassLiquid({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-  const gl = canvas.getContext("webgl", { antialias: true, premultipliedAlpha: true });
+    const gl = canvas.getContext('webgl', { antialias: true, premultipliedAlpha: true });
     if (!gl) return; // gracefully no-op if WebGL unsupported
 
     glRef.current = gl;
 
-  const onLost = (e) => { e.preventDefault(); };
-  const onRestored = () => { /* handled by remount */ };
-  canvas.addEventListener("webglcontextlost", onLost, false);
-  canvas.addEventListener("webglcontextrestored", onRestored, false);
+    const onLost = (e) => {
+      e.preventDefault();
+    };
+    const onRestored = () => {
+      /* handled by remount */
+    };
+    canvas.addEventListener('webglcontextlost', onLost, false);
+    canvas.addEventListener('webglcontextrestored', onRestored, false);
 
     const vert = `
       attribute vec2 a_pos;
@@ -73,7 +77,7 @@ export default function GlassLiquid({
     `;
 
     // Adapted fbm + specular highlight; produces a liquid-like glass motion
-  const frag = `
+    const frag = `
       precision highp float;
       varying vec2 v_uv;
       uniform vec2 u_res;
@@ -151,7 +155,7 @@ export default function GlassLiquid({
       gl.shaderSource(s, source);
       gl.compileShader(s);
       if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-        console.warn("GL shader error:", gl.getShaderInfoLog(s));
+        console.warn('GL shader error:', gl.getShaderInfoLog(s));
         gl.deleteShader(s);
         return null;
       }
@@ -167,7 +171,7 @@ export default function GlassLiquid({
     gl.attachShader(prog, fs);
     gl.linkProgram(prog);
     if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-      console.warn("GL link error:", gl.getProgramInfoLog(prog));
+      console.warn('GL link error:', gl.getProgramInfoLog(prog));
       return;
     }
     gl.useProgram(prog);
@@ -177,27 +181,20 @@ export default function GlassLiquid({
     // Fullscreen quad
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    const verts = new Float32Array([
-      -1, -1,
-       1, -1,
-      -1,  1,
-      -1,  1,
-       1, -1,
-       1,  1,
-    ]);
+    const verts = new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]);
     gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
-  const aPos = gl.getAttribLocation(prog, "a_pos");
+    const aPos = gl.getAttribLocation(prog, 'a_pos');
     gl.enableVertexAttribArray(aPos);
     gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
 
     // Uniform locations
     const locs = {
-      u_res: gl.getUniformLocation(prog, "u_res"),
-      u_time: gl.getUniformLocation(prog, "u_time"),
-      u_colorA: gl.getUniformLocation(prog, "u_colorA"),
-      u_colorB: gl.getUniformLocation(prog, "u_colorB"),
-      u_opacity: gl.getUniformLocation(prog, "u_opacity"),
-      u_grain: gl.getUniformLocation(prog, "u_grain"),
+      u_res: gl.getUniformLocation(prog, 'u_res'),
+      u_time: gl.getUniformLocation(prog, 'u_time'),
+      u_colorA: gl.getUniformLocation(prog, 'u_colorA'),
+      u_colorB: gl.getUniformLocation(prog, 'u_colorB'),
+      u_opacity: gl.getUniformLocation(prog, 'u_opacity'),
+      u_grain: gl.getUniformLocation(prog, 'u_grain'),
     };
     locationsRef.current = locs;
 
@@ -209,7 +206,7 @@ export default function GlassLiquid({
       lastTsRef.current = ts;
       const { width, height } = canvas;
       gl.viewport(0, 0, width, height);
-      gl.clearColor(0,0,0,0);
+      gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(programRef.current);
       gl.uniform2f(locs.u_res, width, height);
@@ -231,13 +228,44 @@ export default function GlassLiquid({
       } catch {
         void 0; // ignore cleanup error
       }
-      try { gl.disableVertexAttribArray(aPos); } catch { void 0; }
-      try { gl.bindBuffer(gl.ARRAY_BUFFER, null); } catch { void 0; }
-      try { gl.deleteBuffer(buf); } catch { void 0; }
-      try { gl.detachShader(prog, vs); gl.detachShader(prog, fs); } catch { void 0; }
-      try { gl.deleteShader(vs); gl.deleteShader(fs); } catch { void 0; }
-      try { gl.useProgram(null); } catch { void 0; }
-      try { canvas.removeEventListener("webglcontextlost", onLost); canvas.removeEventListener("webglcontextrestored", onRestored); } catch { void 0; }
+      try {
+        gl.disableVertexAttribArray(aPos);
+      } catch {
+        void 0;
+      }
+      try {
+        gl.bindBuffer(gl.ARRAY_BUFFER, null);
+      } catch {
+        void 0;
+      }
+      try {
+        gl.deleteBuffer(buf);
+      } catch {
+        void 0;
+      }
+      try {
+        gl.detachShader(prog, vs);
+        gl.detachShader(prog, fs);
+      } catch {
+        void 0;
+      }
+      try {
+        gl.deleteShader(vs);
+        gl.deleteShader(fs);
+      } catch {
+        void 0;
+      }
+      try {
+        gl.useProgram(null);
+      } catch {
+        void 0;
+      }
+      try {
+        canvas.removeEventListener('webglcontextlost', onLost);
+        canvas.removeEventListener('webglcontextrestored', onRestored);
+      } catch {
+        void 0;
+      }
       lastTsRef.current = 0;
       programRef.current = null;
       glRef.current = null;

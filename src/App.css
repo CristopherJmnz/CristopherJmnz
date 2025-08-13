@@ -1,27 +1,57 @@
-* { margin: 0; padding: 0; }
-*, *::before, *::after { box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --floating-nav-height: clamp(48px, 8vh, 64px);
   --floating-nav-gap: 12px;
 }
 
-body { min-height: 100dvh; }
-input, button, textarea, select { font: inherit; }
+body {
+  min-height: 100dvh;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
-p { text-wrap: pretty; }
-h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
 
-img, video, svg { height: auto; max-width: 100%; }
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
 
-@media (prefers-reduced-motion: reduce)  {
- *, *::before, *::after { 
- animation-duration: 0.01ms !important; 
- animation-iteration-count: 1 !important; 
- transition-duration: 0.01ms !important; 
- scroll-behavior: auto !important;
- transition: none;
- }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
 }
 
 * {
@@ -29,7 +59,6 @@ img, video, svg { height: auto; max-width: 100%; }
   margin: 0;
   padding: 0;
 }
-
 
 .no-scroll {
   overflow: hidden;
@@ -44,7 +73,6 @@ body {
   box-sizing: border-box;
   color: #333;
 }
-
 
 @keyframes fadeInScale {
   0% {
@@ -77,7 +105,7 @@ body {
     -moz-transform: translateY(-50px);
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
-}
+  }
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -94,11 +122,12 @@ body {
   }
 }
 
-
 .section {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .section.visible {
@@ -137,12 +166,12 @@ body {
   font-size: 2em;
 }
 
-.skills ,
-.experience ,
-.about ,
-.contact ,
-.certifications ,
-.projects  {
+.skills,
+.experience,
+.about,
+.contact,
+.certifications,
+.projects {
   display: flex;
   align-items: center;
   justify-content: center;
