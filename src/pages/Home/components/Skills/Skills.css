@@ -7,11 +7,8 @@
 
 .skills-list {
   opacity: 0;
-  /*Inicialmenteocultalalistadehabilidades*/
   max-height: 0;
-  /*Ocultaelcontenido*/
   overflow: hidden;
-  /*Ocultacualquiercontenidoquesobresalga*/
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -19,21 +16,15 @@
   -o-transition: opacity 0.5s ease-in-out;
 }
 
-/* Estilos para las listas de habilidades que están visibles */
 .skills-list.active {
   opacity: 1;
-  /* Hace visible la lista de habilidades */
   max-height: 2000px;
-  /* Muestra todo el contenido */
 }
 
-/* Estilos para los checkboxes personalizados */
 .custom-checkbox {
   display: none;
-  /* Oculta el checkbox estándar */
 }
 
-/* Estilos para el contenedor del checkbox personalizado */
 .custom-checkbox-container {
   display: inline-block;
   cursor: pointer;
@@ -91,11 +82,11 @@
   background-color: #fff;
   margin: 10px;
   padding: 20px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: calc(100% - 40px);
   max-width: 500px;
