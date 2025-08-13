@@ -30,20 +30,11 @@ img, video, svg { height: auto; max-width: 100%; }
   padding: 0;
 }
 
-/* html {
-  scroll-padding-top: 100px;
-} */
 
 .no-scroll {
   overflow: hidden;
   padding-right: 15px;
 }
-
-/* @media (max-width: 991px) {
-  html {
-    scroll-padding-top: 368px;
-  }
-} */
 
 body {
   font-family: Arial, sans-serif;
@@ -166,25 +157,4 @@ body {
   p {
     font-size: 0.9rem;
   }
-}
-
-.icons {
-  color: transparent;
-  background: linear-gradient(to right, #89650b8f, #d9c248);
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: 0.2s;
-  font-size: 1.5rem;
-}
-
-.icons:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  background: linear-gradient(to right, #b6870f8f, #f7dc53);
-  background-clip: text;
-  transition: 0.2s;
-  font-size: 1.5rem;
 }
