@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Exit on first error
+set -e
+
+# Run formatter and linter on staged files; block commit on errors
+pnpm exec lint-staged
