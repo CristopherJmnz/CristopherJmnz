@@ -33,6 +33,7 @@ export const ProjectsGallery = () => {
               <div
                 key={project.id}
                 className="gallery-item"
+                data-project-id={project.id}
                 onClick={() => openModal(project.id)}
               >
                 <img
@@ -51,6 +52,7 @@ export const ProjectsGallery = () => {
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={closeModal}
+        enableCssFilter={false}
       />
     </>
   );
