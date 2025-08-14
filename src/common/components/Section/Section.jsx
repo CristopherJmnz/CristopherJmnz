@@ -7,9 +7,10 @@ const Section = ({
   animationType = 'fadeIn',
   delay = 0,
   threshold = 0.4,
+  repeatAnimation = true,
   ...props
 }) => {
-  const [ref, isVisible] = useIntersectionObserver({ threshold });
+  const [ref, isVisible] = useIntersectionObserver({ threshold, repeat: repeatAnimation });
 
   return (
     <section

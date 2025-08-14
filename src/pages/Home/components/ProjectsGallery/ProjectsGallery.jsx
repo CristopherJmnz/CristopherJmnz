@@ -25,7 +25,7 @@ export const ProjectsGallery = () => {
   };
   return (
     <>
-      <Section id="projects" className="projects">
+      <Section id="projects" className="projects" repeatAnimation={false}>
         <h2>Proyectos</h2>
         <div className="gallery">
           {Object.values(PROJECT_DATA)?.map((project) => {

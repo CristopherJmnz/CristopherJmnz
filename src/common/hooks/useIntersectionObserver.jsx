@@ -9,14 +9,18 @@ export const useIntersectionObserver = (options = {}) => {
     const element = ref.current;
     if (!element) return;
 
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px',
-      ...options,
-    };
+    const { threshold = 0.1, rootMargin = '0px', repeat = true } = options || {};
+
+    const observerOptions = { threshold, rootMargin };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        if (repeat) {
+          // Toggle visibility on enter/leave so animations can replay
+          setIsIntersecting(entry.isIntersecting);
+          return;
+        }
+        // Once-only behavior (legacy)
         if (entry.isIntersecting && !hasAnimated) {
           setIsIntersecting(true);
           setHasAnimated(true);
@@ -28,11 +32,13 @@ export const useIntersectionObserver = (options = {}) => {
     observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
+      try {
+        observer.disconnect();
+      } catch {
+        // no-op
       }
     };
-  }, [options.threshold, options.rootMargin, hasAnimated]);
+  }, [options, hasAnimated]);
 
   return [ref, isIntersecting];
 };
