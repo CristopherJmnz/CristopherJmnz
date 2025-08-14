@@ -90,9 +90,16 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
         }
       >
         <GlassLiquid />
-        <span id="closeModalBtn" className="close" onClick={requestClose}>
+        <button
+          type="button"
+          id="closeModalBtn"
+          className="modal-close-btn"
+          aria-label="Cerrar"
+          title="Cerrar"
+          onClick={requestClose}
+        >
           &times;
-        </span>
+        </button>
         <div className="modal-container">
           <ProjectCarousel
             images={project.images}

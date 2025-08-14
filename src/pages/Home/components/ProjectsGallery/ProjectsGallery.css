@@ -35,27 +35,61 @@
   padding: 10px 0;
 }
 
-.close {
-  top: 0;
-  right: 10px;
-  color: #3a3a3ab8;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 28px;
-  font-weight: bold;
+/* Close button: glassy, always visible, accessible */
+.modal-close-btn {
   position: absolute;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  top: calc(12px + env(safe-area-inset-top, 0px));
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px; /* size of × */
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(28, 28, 31, 0.6);
+  color: rgba(245, 245, 247, 0.96);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 10px 24px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-.close:hover,
-.close:focus {
-  text-decoration: none;
-  cursor: pointer;
-  color: white;
+.modal-close-btn:hover {
+  transform: translateY(-1px) scale(1.03);
+  background: rgba(36, 36, 40, 0.7);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.modal-close-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.modal-close-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 0 4px rgba(0, 122, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 600px) {
+  .modal-close-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    top: calc(8px + env(safe-area-inset-top, 0px));
+    right: calc(8px + env(safe-area-inset-right, 0px));
+  }
 }
 
 .gallery-item {
@@ -126,7 +160,6 @@
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background-color: transparent;
-  /*glassisdrawnunderneathcontent*/
   margin: 5% auto;
   padding: 20px;
   width: 80%;
@@ -449,22 +482,18 @@
 @keyframes iosOverlayIn {
   from {
     background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
   }
   to {
     background: rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(0px);
   }
 }
 
 @keyframes iosOverlayOut {
   from {
     background: rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(4px);
   }
   to {
     background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
   }
 }
 

@@ -2,8 +2,9 @@
   opacity: 0;
   transform: translateY(50px);
   transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+    opacity 0.6s ease-out var(--animation-delay, 0ms),
+    transform 0.6s ease-out var(--animation-delay, 0ms);
+  will-change: opacity, transform;
 }
 
 .section.visible {
