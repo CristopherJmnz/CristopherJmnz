@@ -97,23 +97,12 @@
   max-width: 500px;
   margin: 10px;
   cursor: pointer;
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
+  transition: box-shadow 0.2s ease;
 }
 
-.gallery-item:hover {
-  transform: scale(104%);
-  -webkit-transform: scale(104%);
-  -moz-transform: scale(104%);
-  -ms-transform: scale(104%);
-  -o-transform: scale(104%);
-
-  .gallery-image {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
+.gallery-item:hover .gallery-image {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-image {
@@ -125,12 +114,18 @@
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  /* Fast, snappy hover transition isolated from container's reveal */
+  transition:
+    transform 150ms ease,
+    box-shadow 200ms ease;
+  will-change: transform;
 }
 
 /* Scroll-triggered reveal with per-card stagger */
 .gallery-item.reveal-up {
   opacity: 0;
-  transform: translateY(18px) scale(0.98);
+  /* Enter from slightly below so only the reveal uses the long transform transition */
+  transform: translateY(12px);
   transition:
     opacity 420ms ease-out var(--stagger, 0ms),
     transform 420ms ease-out var(--stagger, 0ms),
@@ -139,7 +134,8 @@
 }
 .gallery-item.reveal-up.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  /* Reset reveal offset; hover scale happens on the inner image, so it's fast */
+  transform: translateY(0);
 }
 
 .gallery-title {

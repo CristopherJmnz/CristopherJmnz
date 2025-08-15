@@ -3,7 +3,7 @@ import Section from '@commonComponents/Section/Section';
 import './AboutMe.css';
 export const AboutMe = () => {
   return (
-    <Section id="about" className="about">
+    <Section id="about" className="about" threshold={0.5}>
       <h2>Sobre mí</h2>
       <div className="about-content">
         <div>

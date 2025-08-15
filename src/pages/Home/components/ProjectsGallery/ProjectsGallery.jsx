@@ -35,7 +35,6 @@ export const ProjectsGallery = () => {
               key={project.id}
               project={project}
               index={index}
-              threshold={0.4}
               onClick={() => openModal(project.id)}
             />
           ))}
