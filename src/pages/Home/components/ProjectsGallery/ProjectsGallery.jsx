@@ -4,6 +4,7 @@ import './ProjectsGallery.css';
 import { PROJECT_DATA } from '@common/constants/projectsData';
 import './ProjectsGallery.css';
 import { ProjectModal } from './components/ProjectModal/ProjectModal';
+import { ProjectCard } from './components/ProjectCard/ProjectCard';
 
 export const ProjectsGallery = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -23,28 +24,21 @@ export const ProjectsGallery = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
   };
+
   return (
     <>
       <Section id="projects" className="projects" repeatAnimation={false}>
         <h2>Proyectos</h2>
         <div className="gallery">
-          {Object.values(PROJECT_DATA)?.map((project) => {
-            return (
-              <div
-                key={project.id}
-                className="gallery-item"
-                data-project-id={project.id}
-                onClick={() => openModal(project.id)}
-              >
-                <img
-                  src={`/src/assets/img/${project.images[0]}`}
-                  alt={project.id}
-                  className="gallery-image"
-                />
-                <div className="gallery-title">{project.name}</div>
-              </div>
-            );
-          })}
+          {Object.values(PROJECT_DATA)?.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              threshold={0.4}
+              onClick={() => openModal(project.id)}
+            />
+          ))}
         </div>
       </Section>
 

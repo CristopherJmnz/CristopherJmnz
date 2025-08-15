@@ -127,6 +127,21 @@
   -o-border-radius: 8px;
 }
 
+/* Scroll-triggered reveal with per-card stagger */
+.gallery-item.reveal-up {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition:
+    opacity 420ms ease-out var(--stagger, 0ms),
+    transform 420ms ease-out var(--stagger, 0ms),
+    box-shadow 200ms ease-out;
+  will-change: opacity, transform;
+}
+.gallery-item.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 .gallery-title {
   margin-top: 10px;
   font-size: 16px;
