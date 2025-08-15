@@ -13,7 +13,7 @@ export const Skills = () => {
     return (
       <ul id={categoryId} className={`skills-list ${activeSkill === categoryId ? 'active' : ''}`}>
         {skills.map((skill, index) => (
-          <li key={index} className="animate">
+          <li key={index} className="animate" style={{ '--stagger': `${index * 45}ms` }}>
             {skill.icon}
             {skill.name}
           </li>
@@ -22,7 +22,7 @@ export const Skills = () => {
     );
   };
   return (
-    <Section id="skills" className="skills">
+    <Section id="skills" className="skills" repeatAnimation={false}>
       <h2>Skills</h2>
       <div className="skills-checkboxes">
         <label className="custom-checkbox-container">
@@ -48,18 +48,6 @@ export const Skills = () => {
           />
           <span className="custom-checkbox-button"> Backend </span>
         </label>
-
-        {/* <label className="custom-checkbox-container">
-          <input
-            type="radio"
-            className="custom-checkbox skill-checkbox"
-            id="powerplatformCheckbox"
-            name="skills"
-            checked={activeSkill === "powerplatform"}
-            onChange={() => toggleSkills("powerplatform")}
-          />
-          <span className="custom-checkbox-button"> Power Platform </span>
-        </label> */}
       </div>
       {renderSkillsList(SKILLS.frontend, 'frontend')}
       {renderSkillsList(SKILLS.backend, 'backend')}

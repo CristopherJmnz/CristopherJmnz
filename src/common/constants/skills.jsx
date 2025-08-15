@@ -131,22 +131,22 @@ export const SKILLS = {
       icon: <SqlServerIcon />,
     },
   ],
-  powerplatform: [
-    {
-      name: 'Power Platform',
-      icon: <PowerPLatformIcon />,
-    },
-    {
-      name: 'Power Apps',
-      icon: <PowerAppsIcon />,
-    },
-    {
-      name: 'Power Automate',
-      icon: <PowerAutomateIcon />,
-    },
-    {
-      name: 'Copilot Studio',
-      icon: <CopilotStudioIcon />,
-    },
-  ],
+  // powerplatform: [
+  //   {
+  //     name: 'Power Platform',
+  //     icon: <PowerPLatformIcon />,
+  //   },
+  //   {
+  //     name: 'Power Apps',
+  //     icon: <PowerAppsIcon />,
+  //   },
+  //   {
+  //     name: 'Power Automate',
+  //     icon: <PowerAutomateIcon />,
+  //   },
+  //   {
+  //     name: 'Copilot Studio',
+  //     icon: <CopilotStudioIcon />,
+  //   },
+  // ],
 };

@@ -9,6 +9,7 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+  margin: 0; /* avoid reserving vertical space when hidden */
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -20,6 +21,8 @@
   opacity: 1;
   max-height: 2000px;
 }
+
+/* (moved below to override generic li transitions) */
 
 .custom-checkbox {
   display: none;
@@ -80,6 +83,7 @@
 .skills ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -127,6 +131,21 @@
   height: 70px;
   font-size: 70px;
   margin-bottom: 10px;
+}
+
+/* Per-item reveal when list becomes active (override comes after generic li transitions) */
+.skills-list li {
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  transition:
+    opacity 380ms ease-out var(--stagger, 0ms),
+    transform 380ms ease-out var(--stagger, 0ms);
+  will-change: opacity, transform;
+}
+
+.skills-list.active li {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 @media (max-width: 768px) {
