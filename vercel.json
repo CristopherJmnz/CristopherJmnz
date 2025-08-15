@@ -1,12 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.cristopher-jmnz.vercel.app" }],
-      "destination": "https://cristopher-jmnz.vercel.app/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/((?!api|.*\\..*).*)",
