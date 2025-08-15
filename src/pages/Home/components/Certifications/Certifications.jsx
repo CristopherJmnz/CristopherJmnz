@@ -3,7 +3,7 @@ import './Certifications.css';
 import { CERTIFICATIONS } from '@common/constants/certifications';
 export const Certifications = () => {
   return (
-    <Section className="certifications" id="certifications">
+    <Section className="certifications" id="certifications" threshold={0.7}>
       <h2>Certificaciones</h2>
       <div className="certifications-list">
         {CERTIFICATIONS.map((certification) => (
