@@ -23,7 +23,6 @@
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
   -webkit-transition: transform 0.3s ease;
   -moz-transition: transform 0.3s ease;
   -ms-transition: transform 0.3s ease;
@@ -43,6 +42,7 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 10px;
+  flex-direction: column;
 }
 
 .company-logo {
@@ -54,6 +54,18 @@
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.experience .experience-points {
+  margin-top: 8px;
+  padding-left: 18px;
+  list-style: disc;
+  text-align: left;
+}
+
+.experience .experience-points li {
+  margin: 4px 0;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {

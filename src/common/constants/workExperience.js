@@ -6,7 +6,7 @@ export const WORK_EXPERIENCE = [
     position: 'Ingeniero de Software',
     period: '03/2025 - Actualidad',
     description:
-      'Mi rol consiste en diseñar e implementar soluciones tecnológicas innovadoras que optimizan procesos y mejoran la experiencia del usuario. Contribuyo creando aplicaciones escalables y eficientes, alineadas con los objetivos estratégicos de la empresa. Mi enfoque está en impulsar la productividad, fomentar el trabajo en equipo y promover un crecimiento continuo.',
+      'Trabajo en los flujos de contratación y cancelación de cuentas y próximamente en el nuevo dashboard para particulares y empresas de la aplicación móvil CaixaBank Now. Colaboro con diseño y con negocio en definición y validación. Practicamos testing continuo y perseguimos la excelencia técnica como parte de la cultura: código de calidad, mantenible y mejora continua.',
   },
   {
     id: 'dxc-technology',
@@ -15,7 +15,7 @@ export const WORK_EXPERIENCE = [
     position: 'Ingeniero de Software',
     period: '09/2024 - 12/2024',
     description:
-      'Mi rol consistió en diseñar e implementar soluciones tecnológicas que optimizaron procesos y mejoraron la experiencia del usuario. Aporté valor creando aplicaciones escalables y eficientes, alineadas con los objetivos estratégicos de la empresa, impulsando la productividad, fomentando el trabajo en equipo y favoreciendo el crecimiento continuo.',
+      'Trabaje en el proyecto de Viajes Olympia (agencia de viajes). Participé en mantenimiento, evolutivos y desarrollos desde cero del backoffice que centraliza reservas, catálogo y tarifas, disponibilidad, promociones y la relación con agencias y proveedores.  También colaboré con negocio y optimicé rendimiento y pruebas.',
   },
   {
     id: 'pinkstone',
