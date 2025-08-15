@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NotFound.css';
 export const NotFound = () => {
   return (
@@ -6,9 +7,9 @@ export const NotFound = () => {
         <h1>404</h1>
         <h2>Página no encontrada</h2>
         <p>Lo sentimos, pero la página que estás buscando no existe.</p>
-        <a href="/" className="back-home">
+        <Link to="/" className="back-home">
           Volver al Inicio
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,59 +1,132 @@
-/* error.css */
 .not-found {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  position: relative;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 24px;
   text-align: center;
-  color: #333;
+  color: rgba(245, 245, 247, 0.96);
+  background:
+    radial-gradient(1100px 600px at 15% 10%, rgba(217, 194, 72, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 85% 80%, rgba(137, 101, 11, 0.06), transparent 60%), #0f0f12;
+  overflow: hidden;
+}
+
+.not-found::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10% -10% -20%;
+  background: radial-gradient(600px 300px at 70% 0%, rgba(255, 255, 255, 0.06), transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
 }
 
 .error-container {
-  max-width: 600px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  position: relative;
+  width: min(820px, 92vw);
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 16px;
+  background: rgba(22, 22, 24, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 20px 60px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(10px);
+  --enter-translate: 32px;
+  animation: nfIn 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .error-container h1 {
-  font-size: 10em;
+  font-size: clamp(84px, 22vw, 180px);
   margin: 0;
+  line-height: 0.9;
+  letter-spacing: 2px;
   color: transparent;
   background: linear-gradient(to right, #89650b8f, #d9c248);
   -webkit-background-clip: text;
   background-clip: text;
+  text-shadow: 0 8px 60px rgba(217, 194, 72, 0.12);
 }
 
 .error-container h2 {
-  font-size: 2em;
-  margin: 20px 0;
+  margin: 8px 0 10px;
+  font-size: clamp(20px, 3.6vw, 32px);
+  font-weight: 600;
+  color: rgba(245, 245, 247, 0.95);
 }
 
 .error-container p {
-  font-size: 1.2em;
-  margin: 20px 0;
+  margin: 0 0 22px;
+  font-size: clamp(14px, 2.4vw, 18px);
+  color: rgba(235, 235, 245, 0.78);
 }
 
 .error-container .back-home {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  background: #007bff;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: rgba(245, 245, 247, 0.96);
   text-decoration: none;
-  transition: background 0.3s ease;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  -ms-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
+  border-radius: 12px;
+  background: rgba(22, 22, 24, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.32);
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .error-container .back-home:hover {
-  background: #0056b3;
+  transform: translateY(-2px) scale(1.03);
+  background: rgba(28, 28, 31, 0.72);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 12px 28px rgba(0, 0, 0, 0.38);
+}
+
+.error-container .back-home:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.error-container .back-home:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 0 4px rgba(0, 122, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+@keyframes nfIn {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--enter-translate)) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .error-container {
+    animation: none !important;
+  }
+  .error-container .back-home {
+    transition: none !important;
+  }
 }
