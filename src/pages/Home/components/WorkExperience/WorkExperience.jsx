@@ -11,11 +11,7 @@ export const WorkExperience = () => {
           return (
             <li key={job.id} className="animate">
               <div className="experience-header">
-                <img
-                  src={`/src/assets/img/${job.logo}`}
-                  alt={job.company}
-                  className="company-logo"
-                />
+                <img src={`/img/${job.logo}`} alt={job.company} className="company-logo" />
                 <h3>{job.company}</h3>
               </div>
               <p>

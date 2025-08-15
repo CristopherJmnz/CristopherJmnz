@@ -4,7 +4,7 @@
   text-align: center;
   padding: 50px 20px;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(@images/banner.webp);
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/banner.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

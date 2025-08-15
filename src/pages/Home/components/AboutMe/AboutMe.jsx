@@ -1,4 +1,3 @@
-import aboutMeImg from '../../../../assets/img/aboutme.webp';
 import Section from '@commonComponents/Section/Section';
 import './AboutMe.css';
 export const AboutMe = () => {
@@ -24,7 +23,7 @@ export const AboutMe = () => {
           </p>
         </div>
         <img
-          src={aboutMeImg}
+          src="/img/aboutme.webp"
           height="266"
           width="400"
           alt="Sobre mí"

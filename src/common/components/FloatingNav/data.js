@@ -1,4 +1,4 @@
-import CvLink from '@documents/CV CRISTOPHER.pdf';
+const CvLink = '/documents/CV CRISTOPHER.pdf';
 
 export const NAV_ITEMS = [
   { id: 'about', label: 'Sobre mí', icon: 'fa-user' },

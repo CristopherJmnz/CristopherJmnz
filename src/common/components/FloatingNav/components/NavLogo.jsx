@@ -1,4 +1,4 @@
-import Logo from '@images/JmnzLogoNoBackgroundSquare.webp';
+const Logo = '/img/JmnzLogoNoBackgroundSquare.webp';
 import './NavLogo.css';
 
 export function NavLogo({ onClick }) {

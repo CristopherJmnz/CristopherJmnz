@@ -15,7 +15,7 @@ export const ProjectCard = ({ project, index, onClick }) => {
       style={{ '--stagger': `${index * 80}ms` }}
     >
       <img
-        src={`/src/assets/img/${project.images[0]}`}
+        src={`/img/${project.images[0]}`}
         alt={project.id}
         className="gallery-image"
         loading="lazy"

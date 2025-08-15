@@ -1,5 +1,5 @@
 import Section from '@commonComponents/Section/Section';
-import CvLink from '@documents/CV CRISTOPHER.pdf';
+const CvLink = '/documents/CV CRISTOPHER.pdf';
 import './ContactMe.css';
 
 export const ContactMe = () => {

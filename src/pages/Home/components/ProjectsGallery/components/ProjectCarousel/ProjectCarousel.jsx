@@ -1,4 +1,4 @@
-const BASE_IMAGE_PATH = '/src/assets/img/';
+const BASE_IMAGE_PATH = '/img/';
 
 export const ProjectCarousel = ({
   images,

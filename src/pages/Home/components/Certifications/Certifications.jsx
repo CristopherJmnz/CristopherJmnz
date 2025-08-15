@@ -9,7 +9,7 @@ export const Certifications = () => {
         {CERTIFICATIONS.map((certification) => (
           <div className="certification-card" key={certification.id}>
             <img
-              src={`/src/assets/img/${certification.image}`}
+              src={`/img/${certification.image}`}
               alt={certification.alt}
               className="certification-badge"
               height="230"

@@ -1,6 +1,7 @@
 import './Header.css';
-import Logo from '@images/JmnzLogoNoBackgroundSquare.webp';
-import CvLink from '@documents/CV CRISTOPHER.pdf';
+// Assets served from public/
+const Logo = '/img/JmnzLogoNoBackgroundSquare.webp';
+const CvLink = '/documents/CV CRISTOPHER.pdf';
 export const Header = () => {
   return (
     <>
