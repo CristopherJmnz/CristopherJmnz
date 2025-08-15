@@ -44,7 +44,7 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
       void 0;
     }
     // Play exit animation, then cleanup + unmount
-    const EXIT_MS = 700; // match CSS genieToOrigin duration
+    const EXIT_MS = 100; // match CSS genieToOrigin duration
     // Clean Bootstrap carousel before unmount to avoid leaks
     try {
       cleanupCarousel?.();
