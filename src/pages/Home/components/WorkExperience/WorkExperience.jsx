@@ -14,11 +14,10 @@ export const WorkExperience = () => {
                 <img src={`/img/${job.logo}`} alt={job.company} className="company-logo" />
                 <h3>{job.company}</h3>
               </div>
+              <h4>
+                <b>{job.position}</b>
+              </h4>
               <p>
-                <span>
-                  <b>{job.position}</b>
-                </span>
-                <br />
                 <span>{job.period}</span>
               </p>
               {paragraphs.map((paragraph, index) => (
