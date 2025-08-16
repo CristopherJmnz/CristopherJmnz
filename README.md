@@ -4,7 +4,7 @@
 
 Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcionales y compromiso con la excelencia.
 
-<img src="./docs/github-banner.png" alt="Banner de GitHub — Cristopher Jiménez" style="max-width: 100%; border-radius: 12px;" />
+<img src="https://cristopher-jmnz.vercel.app/img/banner-github-cristopher-jmnz.png" alt="Banner de GitHub — Cristopher Jiménez" style="max-width: 100%; border-radius: 12px;" />
 
 <p>
 	<a href="https://cristopher-jmnz.vercel.app"
