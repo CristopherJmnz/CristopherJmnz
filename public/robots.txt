@@ -1,0 +1,5 @@
+# robots.txt for cristopher-jmnz.vercel.app
+User-agent: *
+Allow: /
+
+Sitemap: https://cristopher-jmnz.vercel.app/sitemap.xml

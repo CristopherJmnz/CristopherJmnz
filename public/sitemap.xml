@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <!-- Secciones internas como anchors pueden incluirse, pero Google puede ignorarlas -->
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/#about</loc>
+  </url>
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/#projects</loc>
+  </url>
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/#certifications</loc>
+  </url>
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/#experience</loc>
+  </url>
+  <url>
+    <loc>https://cristopher-jmnz.vercel.app/#contact</loc>
+  </url>
+</urlset>
