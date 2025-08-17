@@ -6,19 +6,15 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 
 <img src="./public/img/banner-github-cristopher-jmnz.png" alt="Banner de GitHub — Cristopher Jiménez" style="max-width: 100%; border-radius: 12px;" />
 
-<p>
-	<a href="https://cristopher-jmnz.vercel.app"
-		 style="display:inline-block; margin:6px; padding:10px 16px; border-radius:999px; background:rgba(0,0,0,0.85); color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.12);">
-		Sitio web
-	</a> |
-	<a href="https://www.linkedin.com/in/cristopher-jimenez-jimenez/"
-		 style="display:inline-block; margin:6px; padding:10px 16px; border-radius:999px; background:rgba(0,0,0,0.85); color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.12);">
-		LinkedIn
+<p align="center">
+	<a href="https://cristopher-jmnz.vercel.app">
+		<img src="https://cdn.jsdelivr.net/npm/lucide-static@0.427.0/icons/globe.svg" alt="Sitio web" height="48" />
 	</a>
-	|
-	<a href="mailto:crisjimenez19@gmail.com"
-		 style="display:inline-block; margin:6px; padding:10px 16px; border-radius:999px; background:rgba(0,0,0,0.85); color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.12);">
-		Email
+	<a href="https://www.linkedin.com/in/cristopher-jimenez-jimenez/" >
+		<img src="https://skillicons.dev/icons?i=linkedin" />
+	</a>
+	<a href="mailto:crisjimenez19@gmail.com">
+		<img src="https://skillicons.dev/icons?i=gmail" />
 	</a>
 </p>
 
@@ -38,7 +34,7 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 ### Frontend
 
 <p align="left">
-	<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs">
+	<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs">
 	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" title="Angular" width="50" />
 	<img src="https://skillicons.dev/icons?i=vue,tailwind,jquery">
 </p>
@@ -50,9 +46,9 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 ### Bases de datos
 
 <p align="left">
-<img src="https://skillicons.dev/icons?i=mysql,postgresql,dotnet,php,aws,azure"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" title="SQL Server" width="50" />
-	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle (PL/SQL)" title="Oracle (PL/SQL)" width="50" />
+<img src="https://skillicons.dev/icons?i=mysql,postgresql"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" title="SQL Server" width="48" />
+	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle (PL/SQL)" title="Oracle (PL/SQL)" width="48" />
 	</p>
 
 ### Control de versiones y colaboración
@@ -61,7 +57,7 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 
 ### Herramientas
 
-![My Skills](https://skillicons.dev/icons?i=vscode,idea,figma,postman,vercel,vite,notion)
+![My Skills](https://skillicons.dev/icons?i=vscode,idea,visualstudio,figma,postman,vercel,vite,notion)
 
 ## Acerca de mí
 
