@@ -7,13 +7,13 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 <img src="./public/img/banner-github-cristopher-jmnz.png" alt="Banner de GitHub — Cristopher Jiménez" style="max-width: 100%; border-radius: 12px;" />
 
 <p align="center">
-	<a href="https://cristopher-jmnz.vercel.app">
+	<a href="https://cristopher-jmnz.vercel.app" target="_blank">
 		<img src="https://cdn.jsdelivr.net/npm/lucide-static@0.427.0/icons/globe.svg" alt="Sitio web" height="48" />
 	</a>
-	<a href="https://www.linkedin.com/in/cristopher-jimenez-jimenez/" >
+	<a href="https://www.linkedin.com/in/cristopher-jimenez-jimenez/" target="_blank">
 		<img src="https://skillicons.dev/icons?i=linkedin" />
 	</a>
-	<a href="mailto:crisjimenez19@gmail.com">
+	<a href="mailto:crisjimenez19@gmail.com" target="_blank">
 		<img src="https://skillicons.dev/icons?i=gmail" />
 	</a>
 </p>
