@@ -23,7 +23,7 @@ export const Skills = () => {
   };
   return (
     <Section id="skills" className="skills" repeatAnimation={false}>
-      <h2>Skills</h2>
+      <h2>Tecnologías</h2>
       <div className="skills-checkboxes">
         <label className="custom-checkbox-container">
           <input

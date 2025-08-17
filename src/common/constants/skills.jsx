@@ -83,10 +83,6 @@ export const SKILLS = {
   ],
   backend: [
     {
-      name: 'PHP',
-      icon: <PhpIcon />,
-    },
-    {
       name: 'Java',
       icon: <JavaIcon />,
     },
@@ -101,6 +97,10 @@ export const SKILLS = {
     {
       name: '.NET',
       icon: <DotNetIcon />,
+    },
+    {
+      name: 'PHP',
+      icon: <PhpIcon />,
     },
     {
       name: 'Azure',
