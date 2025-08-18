@@ -8,7 +8,7 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 
 <p align="center">
 	<a href="https://cristopher-jmnz.vercel.app" target="_blank">
-		<img src="https://cdn.jsdelivr.net/npm/lucide-static@0.427.0/icons/globe.svg" alt="Sitio web" height="48" />
+		<img src="https://skillicons.dev/icons?i=htmx" alt="Sitio web" />
 	</a>
 	<a href="https://www.linkedin.com/in/cristopher-jimenez-jimenez/" target="_blank">
 		<img src="https://skillicons.dev/icons?i=linkedin" />
@@ -57,7 +57,7 @@ Desarrollador Full‑Stack. Creo productos y apps web con experiencias excepcion
 
 ### Herramientas
 
-![My Skills](https://skillicons.dev/icons?i=vscode,idea,visualstudio,figma,postman,vercel,vite,notion)
+![My Skills](https://skillicons.dev/icons?i=vscode,idea,visualstudio,figma,vite,postman,bash,vercel,notion)
 
 ## Acerca de mí
 
