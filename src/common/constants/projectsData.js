@@ -9,7 +9,7 @@ export const PROJECT_DATA = {
       'drivexperience_coche1.webp',
       'drivexperience_coche2.webp',
       'drivexperience_coche3.webp',
-      'drivexperience_login.webp',
+      // 'drivexperience_login.webp',
       'drivexperience_perfil1.webp',
       'drivexperience_perfil.webp',
       'drivexperience_reservas_done.webp',
